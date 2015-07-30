@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-project-example",
+  "version": "1.0.0",
+  "description": "Node js project example",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "run": "node index.js",
+    "test": "mocha test/*.js",
+    "jshint": "jshint index.js lib/*.js test/*.js",
+    "jscs": "jscs index.js lib/*.js test/*.js"
+  },
+  "author": "Alejandro Santiago Nieto",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "jscs": "^2.0.0",
+    "jshint": "^2.8.0",
+    "mocha": "^2.2.5"
+  }
+}
