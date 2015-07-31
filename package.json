@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "description": "Node js project example",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
+  "files": ["index.js", "lib"],
   "scripts": {
     "run": "node index.js",
-    "run-watch": "nodemon index.js",
+    "run-watch": "nodemon index.js --watch index.js --watch lib/**/*.js",
     "test": "mocha test/*.js",
     "jshint": "jshint index.js lib/*.js test/*.js",
     "jscs": "jscs index.js lib/*.js test/*.js",
