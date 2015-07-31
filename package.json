@@ -5,9 +5,9 @@
   "main": "index.js",
   "files": ["index.js", "lib"],
   "scripts": {
-    "run": "node index.js",
-    "run-watch": "nodemon index.js --watch index.js --watch lib/**/*.js",
+    "start": "node index.js",
     "test": "mocha test/*.js",
+    "watch": "nodemon index.js --watch index.js --watch lib/**/*.js",
     "jshint": "jshint index.js lib/*.js test/*.js",
     "jscs": "jscs index.js lib/*.js test/*.js",
     "check": "npm run test && npm run jshint && npm run jscs"
