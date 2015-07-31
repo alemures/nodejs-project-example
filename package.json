@@ -8,9 +8,11 @@
   },
   "scripts": {
     "run": "node index.js",
+    "run-watch": "nodemon index.js",
     "test": "mocha test/*.js",
     "jshint": "jshint index.js lib/*.js test/*.js",
-    "jscs": "jscs index.js lib/*.js test/*.js"
+    "jscs": "jscs index.js lib/*.js test/*.js",
+    "check": "npm run test && npm run jshint && npm run jscs"
   },
   "author": "Alejandro Santiago Nieto",
   "license": "ISC",
@@ -18,6 +20,7 @@
     "chai": "^3.2.0",
     "jscs": "^2.0.0",
     "jshint": "^2.8.0",
-    "mocha": "^2.2.5"
+    "mocha": "^2.2.5",
+    "nodemon": "^1.4.0"
   }
 }
