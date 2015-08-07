@@ -1,13 +1,13 @@
 {
   "name": "nodejs-project-example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node js project example",
   "main": "index.js",
   "files": ["index.js", "lib"],
   "scripts": {
     "start": "node index.js",
     "test": "mocha test/*.js",
-    "watch": "nodemon index.js --watch index.js --watch lib/**/*.js",
+    "watch": "nodemon index.js --watch index.js --watch lib/*.js",
     "jshint": "jshint index.js lib/*.js test/*.js",
     "jscs": "jscs index.js lib/*.js test/*.js",
     "check": "npm run test && npm run jshint && npm run jscs"
