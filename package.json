@@ -1,7 +1,17 @@
 {
   "name": "nodejs-project-example",
+  "description": "This is the structure for a Node.js project.",
   "version": "1.0.1",
-  "description": "Node js project example",
+  "author": "Alejandro Santiago Nieto",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "jscs": "^2.0.0",
+    "jshint": "^2.8.0",
+    "mocha": "^2.2.5",
+    "nodemon": "^1.4.0"
+  },
   "main": "index.js",
   "files": ["index.js", "lib"],
   "scripts": {
@@ -10,15 +20,7 @@
     "watch": "nodemon index.js --watch index.js --watch lib/*.js",
     "jshint": "jshint index.js lib/*.js test/*.js",
     "jscs": "jscs index.js lib/*.js test/*.js",
+    "jscs:fix": "jscs --fix index.js lib/*.js test/*.js",
     "check": "npm run test && npm run jshint && npm run jscs"
-  },
-  "author": "Alejandro Santiago Nieto",
-  "license": "ISC",
-  "devDependencies": {
-    "chai": "^3.2.0",
-    "jscs": "^2.0.0",
-    "jshint": "^2.8.0",
-    "mocha": "^2.2.5",
-    "nodemon": "^1.4.0"
   }
 }
