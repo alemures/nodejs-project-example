@@ -21,6 +21,6 @@
     "jshint": "jshint index.js lib/*.js test/*.js",
     "jscs": "jscs index.js lib/*.js test/*.js",
     "jscs:fix": "jscs --fix index.js lib/*.js test/*.js",
-    "check": "npm run test && npm run jshint && npm run jscs"
+    "check": "npm run test && npm run jshint && npm run jscs && npm outdated"
   }
 }
