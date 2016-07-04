@@ -1,4 +1,6 @@
-var Lib = require('./lib/Lib');
+'use strict';
 
-var l = new Lib('Awesome library');
-console.log(l.getName());
+const Car = require('./lib/Car');
+
+let fiat = new Car('Fiat', '500');
+console.log('Car: ' + fiat.toString());
