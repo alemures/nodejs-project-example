@@ -1,22 +1,27 @@
 {
   "name": "nodejs-project-example",
   "description": "This is the structure for a Node.js project.",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "author": "Alejandro Santiago Nieto",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
     "chai": "3.x.x",
+    "istanbul": "0.4.x",
     "jscs": "3.x.x",
     "jshint": "2.x.x",
-    "mocha": "2.x.x",
+    "mocha": "3.x.x",
     "nodemon": "1.x.x"
   },
   "main": "index.js",
-  "files": ["index.js", "lib"],
+  "files": [
+    "index.js",
+    "lib"
+  ],
   "scripts": {
     "start": "node index.js",
     "test": "mocha test/*.js",
+    "test:cover": "istanbul cover _mocha test/*.js",
     "watch": "nodemon index.js --watch index.js --watch lib/*.js",
     "jshint": "jshint index.js lib/*.js test/*.js",
     "jscs": "jscs index.js lib/*.js test/*.js",
