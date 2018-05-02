@@ -26,6 +26,6 @@
     "watch": "nodemon index.js --watch index.js --watch lib/*.js",
     "lint": "eslint index.js lib/*.js test/*.js",
     "lint:fix": "eslint index.js lib/*.js test/*.js --fix",
-    "check": "npm run test && npm run jshint && npm run jscs && npm outdated"
+    "check": "npm test && npm run lint && npm outdated"
   }
 }
