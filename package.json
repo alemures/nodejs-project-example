@@ -24,7 +24,7 @@
   ],
   "scripts": {
     "start": "node index.js",
-    "test": "mocha test/*.js",
+    "test": "mocha --require test/setup.js --ignore test/setup.js test/*.js",
     "test:cover": "nyc --reporter=lcov --reporter=text-summary npm test",
     "watch": "nodemon index.js --watch index.js --watch lib/*.js",
     "lint": "eslint index.js lib/*.js test/*.js",

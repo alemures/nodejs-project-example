@@ -1,4 +1,8 @@
-const Car = require('./lib/Car');
+const CarResource = require('./lib/car-resource');
 
-const fiat = new Car('Fiat', '500');
-console.log(`Car: ${fiat.toString()}`);
+(async () => {
+  const cars = await CarResource.getAll();
+  cars.forEach((car) => {
+    console.log(car.toString());
+  });
+})();
