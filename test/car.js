@@ -2,7 +2,10 @@ const { expect } = require('chai');
 const Car = require('../lib/car');
 
 describe('Car', () => {
-  let fiat = null;
+  /**
+   * @type {Car}
+   */
+  let fiat;
 
   describe('constructor', () => {
     it('should return a Car instance', () => {
