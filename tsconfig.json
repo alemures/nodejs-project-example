@@ -4,8 +4,9 @@
     "strict": true,
     "target": "ES2015",
     "moduleResolution": "Node",
-    "noEmit": true
+    "noEmit": true,
+    "resolveJsonModule": true
   },
   "files": ["index.js"],
-  "include": ["lib", "test"]
+  "include": ["lib", "test", "scripts"]
 }

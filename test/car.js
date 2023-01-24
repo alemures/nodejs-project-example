@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const Car = require('../lib/car');
+const Car = require('../lib/Car');
 
 describe('Car', () => {
   /**

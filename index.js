@@ -1,8 +1,3 @@
-const CarResource = require('./lib/car-resource');
-
-(async () => {
-  const cars = await CarResource.getAll();
-  cars.forEach((car) => {
-    console.log(car.toString());
-  });
-})();
+module.exports.CarResource = require('./lib/CarResource');
+module.exports.Car = require('./lib/Car');
+module.exports.Utils = require('./lib/Utils');

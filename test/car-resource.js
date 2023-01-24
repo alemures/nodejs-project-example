@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const CarResource = require('../lib/car-resource');
+const CarResource = require('../lib/CarResource');
 
 describe('CarResource', () => {
   describe('.getAll()', () => {

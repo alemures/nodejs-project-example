@@ -1,4 +1,4 @@
-declare module "utils" {
+declare module "lib/Utils" {
     export = Utils;
     class Utils {
         /**
@@ -7,7 +7,7 @@ declare module "utils" {
         static formatDate(date: Date): string;
     }
 }
-declare module "car" {
+declare module "lib/Car" {
     export = Car;
     class Car {
         /**
@@ -23,9 +23,15 @@ declare module "car" {
         toString(): string;
     }
 }
-declare module "car-resource" {
+declare module "lib/CarResource" {
     export = CarResource;
     class CarResource {
-        static getAll(): any;
+        static getAll(): Promise<Car[]>;
     }
+    import Car = require("lib/Car");
+}
+declare module "nodejs-project-example" {
+    export const CarResource: typeof import("lib/CarResource");
+    export const Car: typeof import("lib/Car");
+    export const Utils: typeof import("lib/Utils");
 }

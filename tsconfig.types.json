@@ -5,5 +5,6 @@
     "emitDeclarationOnly": true,
     "outFile": "index.d.ts"
   },
+  "files": ["index.js"],
   "include": ["lib"]
 }

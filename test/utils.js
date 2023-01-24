@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const Utils = require('../lib/utils');
+const Utils = require('../lib/Utils');
 
 describe('Utils', () => {
   describe('.formatDate()', () => {
