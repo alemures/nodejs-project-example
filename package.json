@@ -36,5 +36,9 @@
     "types": "tsc",
     "types:generate": "tsc -p tsconfig.types.json && node scripts/fix-declaration.js",
     "check": "npm test && npm run lint && npm run types && npm outdated"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alemures/nodejs-project-example.git"
   }
 }
