@@ -4,13 +4,6 @@
   "description": "This is the structure for a Node.js project.",
   "author": "Alejandro Santiago Nieto",
   "license": "ISC",
-  "main": "index.js",
-  "types": "index.d.ts",
-  "files": [
-    "index.js",
-    "index.d.ts",
-    "lib"
-  ],
   "devDependencies": {
     "@types/chai": "^4.3.4",
     "@types/chai-as-promised": "^7.1.5",
@@ -28,6 +21,13 @@
     "prettier": "^2.5.1",
     "typescript": "^4.9.4"
   },
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "lib"
+  ],
   "scripts": {
     "test": "mocha --require test/setup.js --ignore test/setup.js test/*.js",
     "test:cover": "nyc --reporter=lcov --reporter=text-summary --all --include \"lib/*.js\" npm test",
