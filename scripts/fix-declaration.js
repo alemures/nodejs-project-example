@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 const packageJson = require('../package.json');
 
 const declarationFilePath = path.join(__dirname, '../index.d.ts');
@@ -8,5 +8,5 @@ fs.writeFileSync(
   fs
     .readFileSync(declarationFilePath)
     .toString()
-    .replace('"index"', `"${packageJson.name}"`)
+    .replace('"index"', `"${packageJson.name}"`),
 );

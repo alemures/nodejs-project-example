@@ -19,7 +19,7 @@ declare module "lib/Car" {
         brand: string;
         model: string;
         date: Date;
-        clone(): Car;
+        clone(): import("lib/Car");
         toString(): string;
     }
 }
@@ -31,7 +31,15 @@ declare module "lib/CarResource" {
     import Car = require("lib/Car");
 }
 declare module "nodejs-project-example" {
-    export const CarResource: typeof import("lib/CarResource");
-    export const Car: typeof import("lib/Car");
-    export const Utils: typeof import("lib/Utils");
+    export const CarResource: {
+        new (): import("lib/CarResource");
+        getAll(): Promise<import("lib/Car")[]>;
+    };
+    export const Car: {
+        new (brand: string, model: string, date: Date): import("lib/Car");
+    };
+    export const Utils: {
+        new (): import("lib/Utils");
+        formatDate(date: Date): string;
+    };
 }
