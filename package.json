@@ -1,7 +1,7 @@
 {
   "name": "nodejs-project-example",
-  "version": "2.0.0",
   "description": "This is the structure for a Node.js project.",
+  "version": "2.0.0",
   "author": "Alejandro Santiago Nieto",
   "license": "ISC",
   "devDependencies": {
@@ -33,7 +33,7 @@
     "types": "tsc",
     "types:generate": "tsc -p tsconfig.types.json && node scripts/fix-declaration.js",
     "check": "npm test && npm run lint && npm run types",
-    "prepublishOnly": "npm run check"
+    "prepack": "npm run check && npm run types:generate"
   },
   "repository": {
     "type": "git",
