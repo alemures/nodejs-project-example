@@ -1,3 +1,5 @@
-module.exports.CarResource = require('./lib/CarResource');
-module.exports.Car = require('./lib/Car');
-module.exports.Utils = require('./lib/Utils');
+module.exports = {
+  ...require('./lib/utils'),
+  CarResource: require('./lib/CarResource'),
+  Car: require('./lib/Car'),
+};
