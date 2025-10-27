@@ -7,11 +7,10 @@ declare module "nodejs-project-example_internal_do_not_import/utils" {
     export function formatDate(date: Date): string;
 }
 declare module "nodejs-project-example_internal_do_not_import/Car" {
-    export = Car;
     /**
      * Car model.
      */
-    class Car {
+    export default class Car {
         /**
          * @param {string} brand The brand.
          * @param {string} model The model.
@@ -34,24 +33,25 @@ declare module "nodejs-project-example_internal_do_not_import/Car" {
     }
 }
 declare module "nodejs-project-example_internal_do_not_import/CarResource" {
-    export = CarResource;
     /**
      * Perform operations in with cars.
      */
-    class CarResource {
+    export default class CarResource {
         /**
          * Build and returns a list of cars.
          * @returns A list of cars.
          */
         static getAll(): Promise<Car[]>;
     }
-    import Car = require("nodejs-project-example_internal_do_not_import/Car");
+    import Car from "nodejs-project-example_internal_do_not_import/Car";
 }
 declare module "nodejs-project-example" {
-    const _exports: {
-        CarResource: typeof import("nodejs-project-example_internal_do_not_import/CarResource");
-        Car: typeof import("nodejs-project-example_internal_do_not_import/Car");
-        formatDate: typeof import("nodejs-project-example_internal_do_not_import/utils").formatDate;
+    const _default: {
+        CarResource: typeof CarResource;
+        Car: typeof Car;
+        formatDate(date: Date): string;
     };
-    export = _exports;
+    export default _default;
+    import CarResource from "nodejs-project-example_internal_do_not_import/CarResource";
+    import Car from "nodejs-project-example_internal_do_not_import/Car";
 }

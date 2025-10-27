@@ -1,4 +1,4 @@
-const Car = require('../lib/Car');
+import Car from '../lib/Car.js';
 
 describe('Car', () => {
   /**

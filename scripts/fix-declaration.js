@@ -1,8 +1,8 @@
-const fs = require('node:fs');
-const path = require('node:path');
-const packageJson = require('../package.json');
+import path from 'path';
+import fs from 'fs';
+import packageJson from '../package.json' with { type: 'json' };
 
-const declarationFilePath = path.join(__dirname, '../index.d.ts');
+const declarationFilePath = path.join(import.meta.dirname, '../index.d.ts');
 fs.writeFileSync(
   declarationFilePath,
   fs
@@ -14,7 +14,7 @@ fs.writeFileSync(
       `declare module "${packageJson.name}_internal_do_not_import/`,
     )
     .replace(
-      /(require|import)\("lib\//g,
-      `$1("${packageJson.name}_internal_do_not_import/`,
+      /from\s+"lib\//g,
+      `from "${packageJson.name}_internal_do_not_import/`,
     ),
 );

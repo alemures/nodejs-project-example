@@ -16,7 +16,7 @@
     "prettier": "^3.5.3",
     "typescript": "^5.8.2"
   },
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "types": "index.d.ts",
   "files": [
@@ -25,7 +25,7 @@
     "lib"
   ],
   "scripts": {
-    "test": "jest",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test:watch": "npm test -- --watch",
     "test:cover": "npm test -- --coverage",
     "lint": "eslint *.js lib/**/*.js test/**/*.js scripts/**/*.js",

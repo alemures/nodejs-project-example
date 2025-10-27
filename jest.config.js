@@ -1,5 +1,5 @@
 /** @type {import('jest').Config} */
-module.exports = {
+export default {
   testMatch: ['<rootDir>/test/**/*'],
   collectCoverageFrom: ['<rootDir>/lib/**/*'],
 };

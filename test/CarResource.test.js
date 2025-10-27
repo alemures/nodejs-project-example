@@ -1,4 +1,4 @@
-const CarResource = require('../lib/CarResource');
+import CarResource from '../lib/CarResource.js';
 
 describe('CarResource', () => {
   describe('.getAll()', () => {

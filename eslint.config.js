@@ -1,12 +1,12 @@
-const globals = require('globals');
-const pluginJs = require('@eslint/js');
-const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended');
+import globals from 'globals';
+import pluginJs from '@eslint/js';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 
 /** @type {import('eslint').Linter.Config[]} */
-module.exports = [
+export default [
   {
     files: ['**/*.js'],
-    languageOptions: { sourceType: 'commonjs', globals: globals.node },
+    languageOptions: { sourceType: 'module', globals: globals.node },
   },
   { files: ['test/**/*.js'], languageOptions: { globals: globals.jest } },
   pluginJs.configs.recommended,

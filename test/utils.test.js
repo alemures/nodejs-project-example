@@ -1,4 +1,4 @@
-const { formatDate } = require('../lib/utils');
+import { formatDate } from '../lib/utils.js';
 
 describe('utils', () => {
   describe('.formatDate()', () => {
