@@ -1,9 +1,3 @@
-import * as utils from './lib/utils.js';
-import Car from './lib/Car.js';
-import CarResource from './lib/CarResource.js';
-
-export default {
-  ...utils,
-  CarResource: CarResource,
-  Car: Car,
-};
+export * from './lib/utils.js';
+export { default as Car } from './lib/Car.js';
+export { default as CarResource } from './lib/CarResource.js';

@@ -46,12 +46,7 @@ declare module "nodejs-project-example_internal_do_not_import/CarResource" {
     import Car from "nodejs-project-example_internal_do_not_import/Car";
 }
 declare module "nodejs-project-example" {
-    const _default: {
-        CarResource: typeof CarResource;
-        Car: typeof Car;
-        formatDate(date: Date): string;
-    };
-    export default _default;
-    import CarResource from "nodejs-project-example_internal_do_not_import/CarResource";
-    import Car from "nodejs-project-example_internal_do_not_import/Car";
+    export * from "nodejs-project-example_internal_do_not_import/utils";
+    export { default as Car } from "nodejs-project-example_internal_do_not_import/Car";
+    export { default as CarResource } from "nodejs-project-example_internal_do_not_import/CarResource";
 }

@@ -10,11 +10,12 @@ fs.writeFileSync(
     .toString()
     .replace('declare module "index"', `declare module "${packageJson.name}"`)
     .replace(
-      /declare module "lib\//g,
+      /declare module "(\.\/)?lib\//g,
       `declare module "${packageJson.name}_internal_do_not_import/`,
     )
     .replace(
-      /from\s+"lib\//g,
+      /from\s+"(\.\/)?lib\//g,
       `from "${packageJson.name}_internal_do_not_import/`,
-    ),
+    )
+    .replace(/\.js/g, ''),
 );

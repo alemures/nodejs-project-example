@@ -17,9 +17,14 @@
     "typescript": "^5.8.2"
   },
   "type": "module",
-  "main": "index.js",
+  "main": "index.cjs",
   "types": "index.d.ts",
+  "exports": {
+    "import": "./index.js",
+    "require": "./index.cjs"
+  },
   "files": [
+    "index.cjs",
     "index.js",
     "index.d.ts",
     "lib"
@@ -28,7 +33,7 @@
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test:watch": "npm test -- --watch",
     "test:cover": "npm test -- --coverage",
-    "lint": "eslint *.js lib/**/*.js test/**/*.js scripts/**/*.js",
+    "lint": "eslint *.js *.cjs lib/**/*.js test/**/*.js scripts/**/*.js",
     "lint:fix": "npm run lint -- --fix",
     "types": "tsc",
     "types:generate": "tsc -p tsconfig.types.json && node scripts/fix-declaration.js",
