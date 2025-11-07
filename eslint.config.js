@@ -8,7 +8,7 @@ export default [
     files: ['**/*.js'],
     languageOptions: { sourceType: 'module', globals: globals.node },
   },
-  { files: ['test/**/*.js'], languageOptions: { globals: globals.jest } },
+  { files: ['test/**/*.js'], languageOptions: { globals: globals.vitest } },
   pluginJs.configs.recommended,
   eslintPluginPrettierRecommended,
 ];

@@ -6,15 +6,15 @@
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.22.0",
-    "@types/jest": "^29.5.14",
     "@types/node": "^22.13.9",
+    "@vitest/coverage-v8": "^4.0.7",
     "eslint": "^9.22.0",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-prettier": "^5.2.3",
     "globals": "^16.0.0",
-    "jest": "^29.7.0",
     "prettier": "^3.5.3",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.2",
+    "vitest": "^4.0.7"
   },
   "type": "module",
   "main": "index.cjs",
@@ -30,9 +30,9 @@
     "lib"
   ],
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "test:watch": "npm test -- --watch",
-    "test:cover": "npm test -- --coverage",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:cover": "vitest run --coverage",
     "lint": "eslint *.js *.cjs lib/**/*.js test/**/*.js scripts/**/*.js",
     "lint:fix": "npm run lint -- --fix",
     "types": "tsc",
