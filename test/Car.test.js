@@ -1,4 +1,4 @@
-import Car from '../lib/Car.js';
+import Car from '../src/Car.js';
 
 describe('Car', () => {
   /**

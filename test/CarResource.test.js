@@ -1,4 +1,4 @@
-import CarResource from '../lib/CarResource.js';
+import CarResource from '../src/CarResource.js';
 
 describe('CarResource', () => {
   describe('.getAll()', () => {

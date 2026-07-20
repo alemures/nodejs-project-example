@@ -17,7 +17,7 @@ export default class Car {
 
   /**
    * Clones the current car.
-   * @returns The clonned car.
+   * @returns The cloned car.
    */
   clone() {
     return new Car(this.brand, this.model, new Date(this.date.getTime()));

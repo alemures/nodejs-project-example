@@ -3,9 +3,9 @@ import { defineConfig } from 'vitest/config';
 export default defineConfig({
   test: {
     globals: true,
-    include: ['test/**/*'],
+    include: ['test/**/*.js'],
     coverage: {
-      include: ['lib/**/*'],
+      include: ['src/**/*.js'],
     },
   },
 });

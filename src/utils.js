@@ -14,7 +14,7 @@ const MONTH_NAMES = [
 ];
 
 /**
- * Returns a formated date.
+ * Returns a formatted date.
  * @param {Date} date The date.
  * @returns The formatted date.
  */
